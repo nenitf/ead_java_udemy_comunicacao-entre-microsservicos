@@ -5,3 +5,11 @@
 ![objetivo](objetivo.jpg)
 
 ![arquitetura](arquitetura.jpg)
+
+## Desenvolvimento
+
+1. Suba o ambiente
+
+```sh
+docker-compose up -d
+```
