@@ -9,7 +9,8 @@
 ## Desenvolvimento
 
 1. Suba o ambiente
+    ```sh
+    docker-compose up -d
+    ```
 
-```sh
-docker-compose up -d
-```
+    > Pare o ambiente com ``docker-compose down``
