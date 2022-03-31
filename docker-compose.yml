@@ -3,7 +3,6 @@ services:
 
   sales-db:
     image: tutum/mongodb
-    container_name: sales-db
     restart: always
     networks:
       - sales-network
@@ -17,7 +16,6 @@ services:
 
   auth-db:
     image: postgres:11
-    container_name: auth-db
     restart: always
     networks:
       - sales-network
@@ -30,7 +28,6 @@ services:
 
   sales_rabbit:
     image: rabbitmq:3-management
-    container_name: sales_rabbit
     hostname: sales_rabbit
     networks:
       - sales-network
@@ -44,7 +41,6 @@ services:
 
   product-db:
     image: postgres:11
-    container_name: product-db
     restart: always
     networks:
       - sales-network
@@ -57,7 +53,6 @@ services:
 
   product-api:
     build: './product-api'
-    container_name: product-api
     depends_on:
       - product-db
       - sales_rabbit
@@ -79,10 +74,10 @@ services:
       - SALES_PORT=8082
     ports:
       - 8081:8081
+    command: gradle bootRun
 
   sales-api:
     build: './sales-api'
-    container_name: sales-api
     depends_on:
       - sales-db
       - sales_rabbit
@@ -98,10 +93,10 @@ services:
       - NODE_ENV=container
     ports:
       - 8082:8082
+    command: node app.js
 
   auth-api:
     build: './auth-api'
-    container_name: auth-api
     depends_on:
       - auth-db
       - product-api
@@ -118,6 +113,7 @@ services:
       - NODE_ENV=container
     ports:
       - 8080:8080
+    command: node app.js
 
 networks:
   sales-network:

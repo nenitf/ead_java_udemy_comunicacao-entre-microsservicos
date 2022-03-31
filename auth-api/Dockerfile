@@ -1,7 +1,4 @@
 FROM node:14
-WORKDIR .
-COPY package*.json ./
+COPY . /app
+WORKDIR /app
 RUN yarn
-COPY . .
-EXPOSE 8080
-CMD ["node", "app.js"]
