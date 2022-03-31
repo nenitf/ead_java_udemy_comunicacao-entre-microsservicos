@@ -77,7 +77,6 @@ services:
       - SALES_PORT=8082
     ports:
       - 8081:8081
-    tty: true
     command: tail -f /dev/null
 
   sales-api:
