@@ -102,6 +102,9 @@ services:
       #- product-api
     networks:
       - sales-network
+    volumes:
+      - ./auth-api:/app
+      - /app/node_modules
     environment:
       - PORT=8080
       - API_SECRET=YXV0aC1hcGktc2VjcmV0LWNvbnRhaW5lci0xMjM0NTY=
