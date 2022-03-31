@@ -1,3 +1,9 @@
+########################### AUTH API
+/auth-api/node_modules
+
+########################### SALES API
+/sales-api/node_modules
+
 ########################### PRODUCT API
 /product-api/HELP.md
 /product-api/.gitignore
