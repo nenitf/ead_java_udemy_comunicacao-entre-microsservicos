@@ -18,7 +18,16 @@
     > Acesse um serviço com ``docker-compose exec <service-name-no-docker-compose> sh``
 
 2. Suba as aplicações
-    a. ``docker-compose exec auth-api yarn startDev``
+    1. Auth API
+        ```sh
+        docker-compose exec auth-api yarn startDev
+        ```
+
         > ``localhost:8082/api/status``
-    b. ``docker-compose exec product-api gradle bootRun``
+
+    2. Product API
+        ```sh
+        docker-compose exec product-api gradle bootRun
+        ```
+
         > ``localhost:8081/api/status``
