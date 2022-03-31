@@ -23,7 +23,7 @@
         docker-compose exec auth-api yarn startDev
         ```
 
-        > ``localhost:8082/api/status``
+        > ``localhost:8080/api/status``
 
     2. Product API
         ```sh
@@ -31,3 +31,10 @@
         ```
 
         > ``localhost:8081/api/status``
+
+    3. Sales API
+        ```sh
+        docker-compose exec sales-api yarn startDev
+        ```
+
+        > ``localhost:8082/api/status``
