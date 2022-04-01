@@ -15,7 +15,7 @@
 
     > Pare o ambiente com ``docker-compose down``
 
-    > Acesse um serviço com ``docker-compose exec <service-name-no-docker-compose> sh``
+    > Acesse um serviço com ``docker-compose exec <service-name-no-docker-compose> /bin/bash``
 
 2. Suba as aplicações
     1. Auth API

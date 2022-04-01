@@ -1,0 +1,16 @@
+# com o vim, <c-j> ou o g:vrc_trigger no método http
+# https://github.com/diepm/vim-rest-console.git
+
+http://localhost:8080
+-H Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRoVXNlciI6eyJpZCI6MSwibmFtZSI6IlVzZXIgVGVzdCAxIiwiZW1haWwiOiJ0ZXN0ZXVzZXIxQGdtYWlsLmNvbSJ9LCJpYXQiOjE2NDg3NzY5ODIsImV4cCI6MTY0ODg2MzM4Mn0.j9aAeeH0rNmbWDYI4bGiB22Hn0bOAV2XmsQ6Xvj5GDM
+--
+--
+GET /api/status
+--
+POST /api/user/auth
+{
+  "email": "testeuser1@gmail.com",
+  "password": "123456"
+}
+--
+GET /api/user/email/testeuser1@gmail.com
